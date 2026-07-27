@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+.card {
+    background-color: #51C323;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 7px solid #51C323;
+    border-top: 20px solid #51C323;
+    width: 280px;
+    max-width: 85vw;
+    color: white;
+    font-weight: initial;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    position: relative; /* necesar ca imaginea sa se raporteze la card, nu la pagina */
+}
+.card h2 {
+    text-align: center;
+    font-weight: normal;
+    font-size: 18px;
+    margin-bottom: 12px;
+}
+.incard {
+    background-color: white;
+    padding: 20px;
+    padding-bottom: 5px;
+    width: 100%;
+    color: black;
+    font-size: 14px;
+    border-radius: 0px 0px 16px 16px;
+}
+.incard h3 {
+    font-size: 15px;
+}
+
+.card img {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+    left: 50%;
+    bottom: 0;
+    transform: translate(-50%, 50%); /* jumatate din imagine iese sub card, indiferent de ecran */
+    background-color: white;
+    border-radius: 50%;
+    padding: 7px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+}
+
+/* Campuri editabile - se evidentiaza doar cand esti logat */
+.editing p[contenteditable="true"] {
+    background-color: #fff8dc;
+    outline: 1px dashed #cba135;
+    padding: 2px 4px;
+    border-radius: 4px;
+    cursor: text;
+}
+#secretEditBtn {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0,0,0,0.04);
+    cursor: pointer;
+    font-size: 14px;
+    transition: color 0.3s;
+    z-index: 999;
+}
+#secretEditBtn:hover {
+    color: rgba(0,0,0,0.25);
+}
+
+/* Modal login */
+.modalOverlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.modalBox {
+    background: white;
+    padding: 30px;
+    border-radius: 14px;
+    width: 90%;
+    max-width: 320px;
+    box-shadow: 0 10px 30px rgba(0,0,0,.3);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.modalBox h3 {
+    margin-bottom: 10px;
+    color: #222;
+}
+.modalBox input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 14px;
+}
+.modalButtons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.modalButtons button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #51C323;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+}
+.modalButtons .secondaryBtn {
+    background-color: #ccc;
+    color: #333;
+}
+.errorText {
+    color: #D4121A;
+    font-size: 13px;
+    min-height: 16px;
+}
+
+/* Bara de editare */
+#editBar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    z-index: 999;
+    font-size: 14px;
+}
+#editBar button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    background-color: #51C323;
+    color: white;
+    font-family: inherit;
+}
+#editBar .secondaryBtn {
+    background-color: #555;
+}
+
+@media (max-width: 400px) {
+    .card { width: 240px; }
+    .card img { width: 46px; height: 46px; }
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRODMET S.R.L</title>
+    <link rel="stylesheet" href="design.css?v=2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <div class="card" id="contractBox">
+        <h2 id="contractStatus"><i class="fa-solid fa-check"></i> CONTRACT VALID</h2>
+        <div class="incard">
+            <h3>Tip Stingător</h3>
+            <p id="tipStingator">....</p>
+            <br>
+            <h3>Producător</h3>
+            <p id="producator">....</p>
+            <br>
+            <h3>Loc amplasare</h3>
+            <p id="locAmplasare">....</p>
+            <br>
+            <h3>Firmă</h3>
+            <p id="firma">....</p>
+            <br>
+            <h3>Dată verificare</h3>
+            <p id="dataVerificare">....</p>
+            <br>
+            <h3>Serie stingător</h3>
+            <p id="serieStingator">....</p>
+            <br>
+
+            <!-- Vizibil doar in modul de editare -->
+            <div id="expirationEditRow" style="display:none; margin-top:10px;">
+                <h3>Dată expirare (verificare)</h3>
+                <input type="date" id="expirationDateInput">
+            </div>
+
+            <br>
+        </div>
+    </div>
+
+    <!-- Buton secret: aproape invizibil, jos-dreapta -->
+    <div id="secretEditBtn" title="">
+        <i class="fa-solid fa-gear"></i>
+    </div>
+
+    <!-- Modal login -->
+    <div id="loginModal" class="modalOverlay" style="display:none;">
+        <div class="modalBox">
+            <h3>Autentificare</h3>
+            <input type="email" id="loginEmail" placeholder="Email">
+            <input type="password" id="loginPassword" placeholder="Parolă">
+            <div id="loginError" class="errorText"></div>
+            <div class="modalButtons">
+                <button id="loginSubmitBtn">Intră</button>
+                <button id="loginCancelBtn" class="secondaryBtn">Anulează</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bara de editare (apare dupa login) -->
+    <div id="editBar" style="display:none;">
+        <span>Mod editare activ</span>
+        <button id="saveBtn"><i class="fa-solid fa-floppy-disk"></i> Salvează</button>
+        <button id="logoutBtn" class="secondaryBtn"><i class="fa-solid fa-right-from-bracket"></i> Ieși</button>
+    </div>
+
+    <!-- Firebase SDK (compat, simplu de folosit fara build tools) -->
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+
+    <script src="firebase-init.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
