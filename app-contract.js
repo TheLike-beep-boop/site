@@ -48,10 +48,10 @@ function updateValidityBadge() {
     today.setHours(0, 0, 0, 0);
 
     if (today > expDate) {
-        status.innerHTML = '<i class="fa-solid fa-xmark"></i> Contract Invalid';
+        status.innerHTML = '<i class="fa-solid fa-xmark"></i> Stingător Expirat';
         setBoxColor("#D4121A");
     } else {
-        status.innerHTML = '<i class="fa-solid fa-check"></i> Contract Valid';
+        status.innerHTML = '<i class="fa-solid fa-check"></i> Stingător Valid';
         setBoxColor("#51C323");
     }
 }
