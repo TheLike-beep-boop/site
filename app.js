@@ -47,10 +47,10 @@ function updateValidityBadge() {
     today.setHours(0, 0, 0, 0);
 
     if (today > expDate) {
-        status.innerHTML = '<i class="fa-solid fa-xmark"></i> Stingator Expirat';
+        status.innerHTML = '<i class="fa-solid fa-xmark"></i> Stingător Invalid';
         setBoxColor("#D4121A");
     } else {
-        status.innerHTML = '<i class="fa-solid fa-check"></i> Stingator Valid';
+        status.innerHTML = '<i class="fa-solid fa-check"></i> Stingător Valid';
         setBoxColor("#51C323");
     }
 }
