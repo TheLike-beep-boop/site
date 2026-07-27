@@ -2,12 +2,12 @@
 // Aceste valori sunt PUBLICE (nu sunt secrete), securitatea reală vine din
 // regulile Firestore + Authentication, nu din ascunderea acestor date.
 const firebaseConfig = {
-  apiKey: "AIzaSyDswtP0fbl8d_sWvyVJ3ZkseGTYMf9G_lY",
-  authDomain: "prodmet-srl.firebaseapp.com",
-  projectId: "prodmet-srl",
-  storageBucket: "prodmet-srl.firebasestorage.app",
-  messagingSenderId: "470498713048",
-  appId: "1:470498713048:web:eafb75c54a7df9ce43e6ad"
+  apiKey: "AIzaSyDk_WuvZcgRa-FVr-CdyqiEdL49VJOVD_E",
+  authDomain: "stingator-6cf00.firebaseapp.com",
+  projectId: "stingator-6cf00",
+  storageBucket: "stingator-6cf00.firebasestorage.app",
+  messagingSenderId: "672953198248",
+  appId: "1:672953198248:web:1949593fd20c2ef229449d"
 };
 
 firebase.initializeApp(firebaseConfig);
